@@ -50,9 +50,9 @@ public class SendEmail {
            
             message.setSubject("This is Test Mail");    
           
-            message.setText("Dear "+name+"\n\nGreetings to showing interest!!! \n"
+            message.setText("Dear "+name+"\n\nGreetings for showing interest!!! \n"
             		+ "This is My Git Hub URL - https://github.com/ganapathy8974\n"
-            		+ "Follow me in Git then you can esaly get my codes(Free Licence).\n\n"
+            		+ "Follow me in Git then you can easily get my codes(Free Licence).\n\n"
             		+ "Thanks & Regards, \r\n"
             		+ "S.Ganapathy Ramasubramanian,\r\n"
             		+ "Mobile: 1123456789,");

@@ -12,7 +12,7 @@ public class SetEmail {
 		public static void main(String[] args) {		
 			SendEmail send  = new SendEmail();
 			SetEmail set = new SetEmail(send);		
-			String email_list =  "ganapathy8974.v2@gmail.com,barathdhoni851@gmail.com,barathdhoni851@gmail.com,esakkirajesh005@gmail.com";
+			String email_list =  "ganapathy8974.v2@gmail.com,barathdhoni851@gmail.com,barathdhoni851@gmail.com";
 			set.splitEmails(email_list);
 			set.excite();
 		}		
@@ -36,9 +36,9 @@ public class SetEmail {
 			}
 		}	
 		valid_email_count = this.emails.size();
-		System.out.println((emails.length - valid_email_count)-invalid_address + " Duplicate Emails Given \n" + invalid_address + " Invalid Address Given");	
-		System.out.println(valid_email_count + " Valid Email Address Given and ");
-		System.out.println("Mails Send those valid Email addresses only. \n");
+		System.out.println((emails.length - valid_email_count)-invalid_address + " Duplicate Email Given \n" + invalid_address + " Invalid Email Given");	
+		System.out.println(valid_email_count + " Valid Email Address Given");
+		System.out.println("Email Sent these valid Email addresses only. \n");
 	}
 	
 	public void excite() {
