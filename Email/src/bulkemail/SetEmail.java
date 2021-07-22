@@ -7,6 +7,10 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
 public class SetEmail {	
+	SendEmail send;
+	public SetEmail(SendEmail send) {
+		this.send = send;
+	}
 	
 	//-------------------------------Main method------------------------------------------------------------------
 		public static void main(String[] args) {		
@@ -17,13 +21,11 @@ public class SetEmail {
 			set.excite();
 		}		
 	//-------------------------------Main method------------------------------------------------------------------
-		
-	SendEmail send;
-	public SetEmail(SendEmail send) {
-		this.send = send;
-	}
+			
 	Set<String> emails = new TreeSet<String>();
 	int valid_email_count;
+	
+	//This method split the email address and store it into a Tree set.
 	public void splitEmails(String email_list) {
 		int invalid_address = 0;
 		String []emails = email_list.split(",");
@@ -41,23 +43,24 @@ public class SetEmail {
 		System.out.println("Email Sent these valid Email addresses only. \n");
 	}
 	
+	//send email one by one to given addresses
 	public void excite() {
 		Iterator<String> iter = emails.iterator();
 		String []name;
 		String email;
 		int i=1;
-		send.MailAuthentication();
+		send.mailAuthentication();
 		while(iter.hasNext()) {			
 			email = iter.next();
 			name = email.split("@");
-			send.EmailMessage(email,name[0]);
+			send.emailMessage(email,name[0]);
 			System.out.println(" = Done("+ i +"/"+valid_email_count+")");
 			i++;
 		}
 		System.out.println(valid_email_count + " mails successfully sent.");
 	}
 	
-	
+	//This method validate the email address and return the boolean result.
 public boolean isValidEmailAddress(String email) {
 		   boolean result = true;
 		   try {

@@ -16,7 +16,7 @@ public class SendEmail {
     private final String from = "ganapathy8974@gmail.com";
     private final String password = "************";
     //Authentication Method this is create a session once successfully authenticated 
-    public void MailAuthentication() {
+    public void mailAuthentication() {
     	
         String host = "smtp.gmail.com";    
         Properties properties = System.getProperties();
@@ -41,7 +41,7 @@ public class SendEmail {
         session.setDebug(false);
     }
     //This Method Contain Email Messages
-    public void EmailMessage(String to, String name) {
+    public void emailMessage(String to, String name) {
 
         try {            
             MimeMessage message = new MimeMessage(session);            
