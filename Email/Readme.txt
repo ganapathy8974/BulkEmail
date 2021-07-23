@@ -1,5 +1,5 @@
-																			Bulk Email 
-																			----------
+Project Name : Bulk Email 
+
 Used Packages:
 --------------
 1) Activation.jar
