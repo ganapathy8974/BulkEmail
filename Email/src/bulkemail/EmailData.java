@@ -6,16 +6,16 @@ import java.util.TreeSet;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
-public class SetEmail {	
+public class EmailData {	
 	SendEmail send;
-	public SetEmail(SendEmail send) {
+	public EmailData(SendEmail send) {
 		this.send = send;
 	}
 	
 	//-------------------------------Main method------------------------------------------------------------------
 		public static void main(String[] args) {		
 			SendEmail send  = new SendEmail();
-			SetEmail set = new SetEmail(send);		
+			EmailData set = new EmailData(send);		
 			String email_list =  "ganapathy8974.v2@gmail.com,barathdhoni851@gmail.com,barathdhoni851@gmail.com";
 			set.splitEmails(email_list);
 			set.excite();
